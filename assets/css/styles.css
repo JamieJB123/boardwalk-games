@@ -10,15 +10,21 @@
     --highlight-color: #416a8e; /* blue */
     --light-highlight-color: #7a9fc2; /* light blue */
 }
+/* Global styling */
 body {
     font-family: var(--primary-font);
 }
 h1, h2, h3 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
+    text-transform: uppercase;
 }
 .sub-heading-color {
     color: var(--highlight-color);
+}
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 /* Navbar CSS */
@@ -29,6 +35,13 @@ h1, h2, h3 {
  #navbar .logo {
     width: 30px;
  }
+
+ /* Header Styling */
+
+#header .lead {
+    font-family: var(--secondary-font);
+}
+
 /* grid visualisation CSS for testing */
 /* .container, .row {
     border: 2px solid black;
