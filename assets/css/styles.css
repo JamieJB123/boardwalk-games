@@ -58,10 +58,11 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* Ensure all cards are the same height */
-/* .card p {
-    min-height: 120px;
-} */
+/* New Games Section */
+#new-games .card, #fav-games .card {
+    border: none;
+}
+
 
 /* grid visualisation CSS for testing */
 /* .container, .row {
@@ -71,6 +72,8 @@ h2 {
     border: 2px solid white;
     background-color: lightgray;
 } */
+
+
 /* Media Queries */
 
 /* Medium devices (tablets, 768px and up) */
