@@ -1,122 +1,141 @@
 /* Google font import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&display=swap");
 
 /* CSS Variables */
 :root {
-    --primary-font: 'Inter', sans-serif;
-    --secondary-font: 'Macondo', cursive;
-    --primary-color: #3a2620; /* dark brown */
-    --secondary-color: #aa9581; /* light brown */
-    --highlight-color: #416a8e; /* blue */
-    --light-highlight-color: #7a9fc2; /* light blue */
+  --primary-font: "Inter", sans-serif;
+  --secondary-font: "Macondo", cursive;
+  --primary-color: #3a2620; /* dark brown */
+  --secondary-color: #aa9581; /* light brown */
+  --highlight-color: #416a8e; /* blue */
+  --light-highlight-color: #7a9fc2; /* light blue */
 }
 /* Global styling */
 body {
-    font-family: var(--primary-font);
+  font-family: var(--primary-font);
 }
-h1, h2, h3 {
-    font-family: var(--secondary-font);
-    color: var(--primary-color);
-    
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
 }
-h1, h2 {
-    text-transform: uppercase;
+h1,
+h2 {
+  text-transform: uppercase;
 }
 .sub-heading-color {
-    color: var(--highlight-color);
+  color: var(--highlight-color);
 }
 .section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 /* Buttons */
 .custom-button-filled {
-    background-color: var(--highlight-color);
-    border: var(--highlight-color);
-    color: white;
+  background-color: var(--highlight-color);
+  border: var(--highlight-color);
+  color: white;
 }
 .custom-button-filled:hover {
-    background-color: var(--secondary-color);
-    border: var(--secondary-color);
-    color: white;
+  background-color: var(--secondary-color);
+  border: var(--secondary-color);
+  color: white;
 }
 .custom-button-outline {
-    border: 3px solid var(--highlight-color);
-    color: var(--highlight-color);
-    padding: 7px 25px;
+  border: 3px solid var(--highlight-color);
+  color: var(--highlight-color);
+  padding: 7px 25px;
 }
 .custom-button-outline:hover {
-    background-color: var(--highlight-color);
-    color: white;
+  background-color: var(--highlight-color);
+  color: white;
 }
 
 /* Navbar CSS */
- #navbar {
-    background-color: var(--primary-color)
- }
+#navbar {
+  background-color: var(--primary-color);
+}
 
- #navbar .logo {
-    width: 30px;
- }
+#navbar .logo {
+  width: 30px;
+}
 
- /* Header Styling */
+/* Header Styling */
 
 #header .lead {
-    font-family: var(--secondary-font);
+  font-family: var(--secondary-font);
 }
 
 /* Services Section Styling */
 #services .card-footer {
-    font-weight: bold;
-    color: var(--highlight-color);
-    background-color: transparent;
+  font-weight: bold;
+  color: var(--highlight-color);
+  background-color: transparent;
 }
 #services .card {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* New Games Section */
-#new-games .card, #fav-games .card {
-    border: none;
+#new-games .card,
+#fav-games .card {
+  border: none;
+}
+
+/* Events Section */
+
+/* Discount Tag */
+#discount {
+  background-color: var(--highlight-color);
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  max-width: 300px;
+  padding: 5px 10px;
+  margin: auto;
+}
+/* table styling */
+/* font-size small enough that table doesn't overflow on xs screens. Size set back to 1rem in media query for sm screens and up */
+#events .table {
+  font-size: 0.8rem;
 }
 
 /* Footer / contact */
 
 #contact {
-    background-color: var(--primary-color);
-    color: white;
-    padding-bottom: 3rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding-bottom: 3rem;
 }
 #contact h2 {
-    color: white;
+  color: white;
 }
 #contact .sub-heading-color {
-    color: var(--light-highlight-color);
+  color: var(--light-highlight-color);
 }
 #contact i {
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-    margin-right: 15px;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin-right: 15px;
 }
 #contact .social-links i {
-    color:var(--light-highlight-color);
-    font-size: 1.9rem;
-    transition: color 0.3s ease-in-out;
+  color: var(--light-highlight-color);
+  font-size: 1.9rem;
+  transition: color 0.3s ease-in-out;
 }
 #contact .social-links i:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 /* Table styling */
 #contact .table-dark * {
-    background-color: transparent;
+  background-color: transparent;
 }
 
-
-
-/* Grid visualisation CSS for testing */ 
+/* Grid visualisation CSS for testing */
 
 /* .container, .row {
     border: 2px solid black;
@@ -124,35 +143,45 @@ h2 {
 .col-12 {
     border: 2px solid white;
     background-color: lightgray;
-} */
-
+}  */
 
 /* Media Queries */
 
+/* Small devices (576px and up) */
+@media screen and (min-width: 576px) {
+  /* table font returns to normal again */
+  #events .table {
+    font-size: 1rem;
+  }
+  /* discount font returns to normal */
+  #discount {
+    font-size: 1rem;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 
-/* Make all service cards the same height for consistency */
 @media screen and (min-width: 768px) {
-    #services .card-body {
-        min-height: 191px;
-    }
+  /* Make all service cards the same height for consistency */
+  #services .card-body {
+    min-height: 191px;
+  }
 }
 /* Large devices (992px and up) */
 @media screen and (min-width: 992px) {
-    #services .card-body {
-        min-height: auto;
-    }
+  #services .card-body {
+    min-height: auto;
+  }
 }
 /* XL Devices (1200px and up) */
 @media screen and (min-width: 1200px) {
-    #services .card-body {
-        min-height: 220px;
-    }
+  #services .card-body {
+    min-height: 220px;
+  }
 }
 /* XXL Devices (1400px and up) */
 @media screen and (min-width: 1400px) {
-    #services .card-body {
-        min-height: 195px;
-    }
+  #services .card-body {
+    min-height: 195px;
+  }
 }
-
